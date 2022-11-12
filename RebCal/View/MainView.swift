@@ -36,6 +36,10 @@ struct MainView: View {
             .tag(3)
         }
         .accentColor(.red)
+        .onAppear {
+            UITabBar.appearance().backgroundColor = .white
+            UITabBar.appearance().unselectedItemTintColor = UIColor.black
+        }
     }
 }
 

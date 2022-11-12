@@ -15,6 +15,7 @@
 		5E5D5617291E64B000F897A8 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D5616291E64B000F897A8 /* CalculatorView.swift */; };
 		5E5D5619291E656100F897A8 /* AddNewPortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D5618291E656100F897A8 /* AddNewPortfolioView.swift */; };
 		5E5D561B291E658A00F897A8 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D561A291E658A00F897A8 /* SettingView.swift */; };
+		5E5D5621291FA30E00F897A8 /* AddAssetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D5620291FA30E00F897A8 /* AddAssetView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		5E5D5616291E64B000F897A8 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		5E5D5618291E656100F897A8 /* AddNewPortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPortfolioView.swift; sourceTree = "<group>"; };
 		5E5D561A291E658A00F897A8 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		5E5D5620291FA30E00F897A8 /* AddAssetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAssetView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				5E5D5616291E64B000F897A8 /* CalculatorView.swift */,
 				5E5D5618291E656100F897A8 /* AddNewPortfolioView.swift */,
 				5E5D561A291E658A00F897A8 /* SettingView.swift */,
+				5E5D5620291FA30E00F897A8 /* AddAssetView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E5D5621291FA30E00F897A8 /* AddAssetView.swift in Sources */,
 				5E5D5617291E64B000F897A8 /* CalculatorView.swift in Sources */,
 				5E5D5606291E5E0A00F897A8 /* MainView.swift in Sources */,
 				5E5D5615291E647C00F897A8 /* DashboardView.swift in Sources */,
