@@ -16,6 +16,7 @@
 		5E5D5619291E656100F897A8 /* AddNewPortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D5618291E656100F897A8 /* AddNewPortfolioView.swift */; };
 		5E5D561B291E658A00F897A8 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D561A291E658A00F897A8 /* SettingView.swift */; };
 		5E5D5621291FA30E00F897A8 /* AddAssetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D5620291FA30E00F897A8 /* AddAssetView.swift */; };
+		5E5D56232925197200F897A8 /* AssetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D56222925197200F897A8 /* AssetModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		5E5D5618291E656100F897A8 /* AddNewPortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPortfolioView.swift; sourceTree = "<group>"; };
 		5E5D561A291E658A00F897A8 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		5E5D5620291FA30E00F897A8 /* AddAssetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAssetView.swift; sourceTree = "<group>"; };
+		5E5D56222925197200F897A8 /* AssetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		5E5D5612291E5F9F00F897A8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5E5D56222925197200F897A8 /* AssetModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 				5E5D5617291E64B000F897A8 /* CalculatorView.swift in Sources */,
 				5E5D5606291E5E0A00F897A8 /* MainView.swift in Sources */,
 				5E5D5615291E647C00F897A8 /* DashboardView.swift in Sources */,
+				5E5D56232925197200F897A8 /* AssetModel.swift in Sources */,
 				5E5D561B291E658A00F897A8 /* SettingView.swift in Sources */,
 				5E5D5619291E656100F897A8 /* AddNewPortfolioView.swift in Sources */,
 				5E5D5604291E5E0A00F897A8 /* RebCalApp.swift in Sources */,
