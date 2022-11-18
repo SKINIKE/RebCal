@@ -18,6 +18,8 @@
 		5E5D5621291FA30E00F897A8 /* AddAssetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D5620291FA30E00F897A8 /* AddAssetView.swift */; };
 		5E5D56232925197200F897A8 /* AssetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D56222925197200F897A8 /* AssetModel.swift */; };
 		5E5D56252926777A00F897A8 /* AssetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D56242926777A00F897A8 /* AssetViewModel.swift */; };
+		5E5D56272927D6CB00F897A8 /* TickerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D56262927D6CB00F897A8 /* TickerModel.swift */; };
+		5E5D56292927D73B00F897A8 /* TickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D56282927D73B00F897A8 /* TickerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		5E5D5620291FA30E00F897A8 /* AddAssetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAssetView.swift; sourceTree = "<group>"; };
 		5E5D56222925197200F897A8 /* AssetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetModel.swift; sourceTree = "<group>"; };
 		5E5D56242926777A00F897A8 /* AssetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetViewModel.swift; sourceTree = "<group>"; };
+		5E5D56262927D6CB00F897A8 /* TickerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerModel.swift; sourceTree = "<group>"; };
+		5E5D56282927D73B00F897A8 /* TickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				5E5D56222925197200F897A8 /* AssetModel.swift */,
+				5E5D56262927D6CB00F897A8 /* TickerModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -108,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				5E5D56242926777A00F897A8 /* AssetViewModel.swift */,
+				5E5D56282927D73B00F897A8 /* TickerViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -183,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E5D5621291FA30E00F897A8 /* AddAssetView.swift in Sources */,
+				5E5D56272927D6CB00F897A8 /* TickerModel.swift in Sources */,
 				5E5D5617291E64B000F897A8 /* CalculatorView.swift in Sources */,
 				5E5D5606291E5E0A00F897A8 /* MainView.swift in Sources */,
 				5E5D56252926777A00F897A8 /* AssetViewModel.swift in Sources */,
@@ -191,6 +198,7 @@
 				5E5D561B291E658A00F897A8 /* SettingView.swift in Sources */,
 				5E5D5619291E656100F897A8 /* AddNewPortfolioView.swift in Sources */,
 				5E5D5604291E5E0A00F897A8 /* RebCalApp.swift in Sources */,
+				5E5D56292927D73B00F897A8 /* TickerViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

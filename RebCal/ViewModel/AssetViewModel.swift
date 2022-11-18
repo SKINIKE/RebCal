@@ -10,17 +10,16 @@ import SwiftUI
 class AssetViewModel: ObservableObject{
     
     @Published var selectedAsset: String = ""
+    @Published var tradePrice:String = ""
     
     init(){
         self.selectedAsset = "자산을 검색해주세요"
     }
     
-    func selectAsset(){
+    func selectAsset(userTicker: String, userMarket: String){
         // [URL 지정 및 파라미터 값 지정 실시]
         var urlComponents = URLComponents(string: "https://api.upbit.com/v1/ticker?")
-        let market = "KRW"
-        let ticker = "BTC"
-        let markets_value = market + "-" + ticker
+        let markets_value = userMarket + "-" + userTicker
         let paramQuery_markets = URLQueryItem(name: "markets", value: markets_value)
         urlComponents?.queryItems?.append(paramQuery_markets) // 파라미터 지정
         
@@ -34,10 +33,7 @@ class AssetViewModel: ObservableObject{
         
             // [error가 존재하면 종료]
             guard error == nil else {
-                
                 print("fail : ", error?.localizedDescription ?? "")
-                
-                //ui를 변경하는 published 변수는 백그라운드가 아닌 main스레드에서 변경하도록 한다.
                 DispatchQueue.main.async {
                     self.selectedAsset = "fail : \(error?.localizedDescription ?? "")"
                 }
@@ -48,11 +44,8 @@ class AssetViewModel: ObservableObject{
             let successsRange = 200..<300
             guard let statusCode = (response as? HTTPURLResponse)?.statusCode, successsRange.contains(statusCode)
             else {
-                
                 print("error : ", (response as? HTTPURLResponse)?.statusCode ?? 0)
                 print("msg : ", (response as? HTTPURLResponse)?.description ?? "")
-            
-                //ui를 변경하는 published 변수는 백그라운드가 아닌 main스레드에서 변경하도록 한다.
                 DispatchQueue.main.async {
                     self.selectedAsset = "error : \((response as? HTTPURLResponse)?.statusCode ?? 0)"
                 }
@@ -66,6 +59,7 @@ class AssetViewModel: ObservableObject{
                 //ui를 변경하는 published 변수는 백그라운드가 아닌 main스레드에서 변경하도록 한다.
                 DispatchQueue.main.async {
                     self.selectedAsset = asset[0].market!
+                    self.tradePrice = String(asset[0].tradePrice!)
                 }
             }
         }
