@@ -10,6 +10,7 @@ import SwiftUI
 struct AddNewPortfolioView: View {
     
     @State var portfolioName: String = ""
+//    @State var assetTest: Int = 0
     
     var body: some View {
         NavigationView{
@@ -26,6 +27,7 @@ struct AddNewPortfolioView: View {
                     .frame(width:50, height: 20)
                     .padding()
                 }
+//                Text(String(assetTest))
                 Text("포트폴리오명: \(portfolioName)")
                 Spacer()
                 ScrollView(){
