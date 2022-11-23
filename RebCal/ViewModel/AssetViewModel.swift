@@ -9,7 +9,7 @@ import SwiftUI
 
 class AssetViewModel: ObservableObject{
     
-//    @Published var test: Int = 1
+    @Published var test: Int = 0
     
     @Published var selectedAsset: String = ""
     @Published var tradePrice: String = ""
@@ -103,5 +103,10 @@ class AssetViewModel: ObservableObject{
         self.highPrice = ""
         self.lowPrice = ""
         self.signedChangeRate = ""
+    }
+    
+    //testcode
+    func testInt(){
+        self.test += 1
     }
 }

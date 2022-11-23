@@ -9,36 +9,42 @@ import SwiftUI
 
 struct AddAssetView: View {
     
+//    @State var cont:Int
+    var really: (() -> Void)
+    
+    @Environment(\.dismiss) var dismiss //modified
+    
     @ObservedObject var assetViewModel = AssetViewModel()
     @State private var selectedMarket = markets.KRW
     @State var assetTicker: String = ""
     
     var body: some View {
-        NavigationView{
-            VStack{
-                Spacer()
-                Text(assetViewModel.selectedAsset)
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .multilineTextAlignment(.center)
-//                NavigationLink("난다요"){
-//                    AddNewPortfolioView(assetTest: assetViewModel.test)
-//                }
-                if(assetViewModel.tradePrice == ""){
-                    
-                }
-                else{
-                    AssetInfoView()
-                }
-                Spacer()
-                bottomTickerSearchbar()
-            }
-        }
-        .toolbar{
-            Button("추가"){
+        VStack{
+            Spacer()
+            Text(assetViewModel.selectedAsset)
+                .font(.title)
+                .fontWeight(.bold)
+                .multilineTextAlignment(.center)
+            if(assetViewModel.tradePrice == ""){
                 
             }
+            else{
+                AssetInfoView()
+            }
+            Spacer()
+            bottomTickerSearchbar()
         }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(
+            leading:
+                Button("취소"){
+                    dismiss()
+            },
+            trailing:
+                Button("추가"){
+                    really()//testcode
+                    dismiss()
+        })
     }
     
     fileprivate func AssetInfoView() -> some View {
@@ -99,6 +105,6 @@ enum markets: String, CaseIterable, Identifiable {
 
 struct AddAssetView_Previews: PreviewProvider {
     static var previews: some View {
-        AddAssetView()
+        AddAssetView(really: {})//testcode
     }
 }
