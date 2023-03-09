@@ -8,9 +8,9 @@
 import SwiftUI
 
 class PortfolioViewModel: ObservableObject{
-    
-    @Published var id: Int = 1
-    @Published var name: String = "TQQQ Portfolio"
+
+    @Published var id: Int
+    @Published var name: String
     @Published var portfolioItem: [Asset]?
     @Published var portfolioStruct: [String: Int]?
     @Published var createDate: Date = Date()
@@ -20,6 +20,7 @@ class PortfolioViewModel: ObservableObject{
         self.id = 1
         self.name = "TQQQ Portfolio"
         self.createDate = Date()
+        
     }
     
     func getUserDateToString(userDate:Date) -> String {

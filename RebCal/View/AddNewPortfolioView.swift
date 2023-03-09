@@ -9,17 +9,9 @@ import SwiftUI
 
 struct AddNewPortfolioView: View {
     
-    //testcode
-    @ObservedObject var assetViewModel = AssetViewModel()
-    
     @ObservedObject var portfolioViewModel = PortfolioViewModel()
     
     @State var portfolioName: String = ""
-    
-    //testcode
-    func real(){
-        assetViewModel.testInt()
-    }
     
     var body: some View {
         NavigationView{
@@ -32,14 +24,11 @@ struct AddNewPortfolioView: View {
                     Button("저장"){
                         //saveNewPortfolio()
                         print("저장합니당")
-                        real()
                     }
                     .frame(width:50, height: 20)
                     .padding()
                 }
-                //testcode
-                Text(String(assetViewModel.test))
-                Text(portfolioViewModel.getUserDateToString(userDate: portfolioViewModel.createDate))
+//                Text(portfolioViewModel.getUserDateToString(userDate: portfolioViewModel.userPortfolio!.createDate))
                 Text("포트폴리오명: \(portfolioName)")
                 Spacer()
                 ScrollView(){
@@ -55,7 +44,7 @@ struct AddNewPortfolioView: View {
                 }
                 .frame(height: 200)
                 NavigationLink("자산추가"){
-                    AddAssetView(really: real) //testcode
+                    AddAssetView() //testcode
                 }
                 .frame(width: 300)
                 .padding()

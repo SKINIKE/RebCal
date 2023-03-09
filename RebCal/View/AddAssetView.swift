@@ -9,9 +9,6 @@ import SwiftUI
 
 struct AddAssetView: View {
     
-//    @State var cont:Int
-    var really: (() -> Void)
-    
     @Environment(\.dismiss) var dismiss //modified
     
     @ObservedObject var assetViewModel = AssetViewModel()
@@ -42,7 +39,6 @@ struct AddAssetView: View {
             },
             trailing:
                 Button("추가"){
-                    really()//testcode
                     dismiss()
         })
     }
@@ -104,7 +100,8 @@ enum markets: String, CaseIterable, Identifiable {
 }
 
 struct AddAssetView_Previews: PreviewProvider {
+    
     static var previews: some View {
-        AddAssetView(really: {})//testcode
+        AddAssetView()//testcode
     }
 }
